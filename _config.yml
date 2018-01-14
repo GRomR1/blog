@@ -17,7 +17,7 @@ title                    : "GR blog"
 title_separator          : "-"
 name                     : "Ruslan Gainanov"
 description              : "Hi! I'm Ruslan. I'm interested in the development of software and administration of systems. This is another personal blog about IT, servers and software. I've made the site for writing my notes about everything I have ever done. I hope it is helpful to someone. This is just my experience and opinion."
-url                      : "https://blog.w2w2.top" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "GRomR1/blog" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : "/assets/images/500x300.jpg" # path of fallback teaser image, e.g. "/assets/images/500x300.png"
@@ -89,8 +89,8 @@ analytics:
 # Site Author
 author:
   name             : "Ruslan Gainanov"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Soft & DevOps engineer"
+  avatar           : "/assets/images/author-150x150.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  bio              : "Developer, SysAdmin & Traveler"
   location         : "Russia"
   email            : 
   uri              : "https://blog.w2w2.top"
