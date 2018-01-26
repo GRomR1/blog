@@ -7,9 +7,10 @@ gem "jekyll", "~> 3.7.0"
 
 gem "minimal-mistakes-jekyll"
 
-#  gem 'jekyll-sass-converter'
+#  gem 'jekyll-sass-converter'  
+# gem "graphql-client"
 group :jekyll_plugins do
   gem "jekyll-archives"
-  gem "graphql-client"
+
 end
 
