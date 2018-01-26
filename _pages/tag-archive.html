@@ -4,6 +4,9 @@ permalink: /tags/
 title: "Posts by Tag"
 author_profile: true
 ---
+<div class='cloud'>
+        {% tag_cloud %}
+</div>
 
 {% include group-by-array collection=site.posts field="tags" %}
 

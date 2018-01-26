@@ -9,5 +9,7 @@ gem "minimal-mistakes-jekyll"
 
 group :jekyll_plugins do
   gem "jekyll-archives"
+  gem "graphql-client"
+  gem 'jekyll-sass-converter'
 end
 

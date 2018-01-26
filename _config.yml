@@ -61,14 +61,14 @@ search_full_content      : true # true, false (default)
 # SEO Related
 google_site_verification :
 bing_site_verification   :
-yandex_site_verification :
+yandex_site_verification : "eaea34b22b33e2ee"
 naver_site_verification  :
 
 # Social Sharing
 twitter:
-  username               :
+  username               : "GainanovRus"
 facebook:
-  username               :
+  username               : 
   app_id                 :
   publisher              :
 og_image                 : # Open Graph/Twitter default site image
@@ -90,7 +90,7 @@ analytics:
 author:
   name             : "Ruslan Gainanov"
   avatar           : "/assets/images/author-150x150.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Developer, SysAdmin & Traveler"
+  bio              : "System & Software engineer"
   location         : "Russia"
   email            : 
   uri              : "https://blog.w2w2.top"
@@ -257,3 +257,8 @@ defaults:
       comments: # true
       share: true
       related: true
+
+# Create stylable GitHub Card using a Liquid tag {% ghcards %}
+# https://github.com/edward-shen/github-cards
+github_cards:
+    github_access_token: "7242b62f80c1b3a08c5fce15b9395cbf81a2775e"
