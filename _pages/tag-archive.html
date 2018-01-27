@@ -4,8 +4,11 @@ permalink: /tags/
 title: "Posts by Tag"
 author_profile: true
 ---
-<div class='cloud'>
-        {% tag_cloud %}
+<div class="home">
+  <p class="post-meta" style="text-align: justify;">
+  {% capture site_tags %}{% for tag in site.tags %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}{% assign tags = site_tags | split:',' | sort %}
+  {% include tagcloud.html %}
+  </p>
 </div>
 
 {% include group-by-array collection=site.posts field="tags" %}

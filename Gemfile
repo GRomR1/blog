@@ -11,6 +11,6 @@ gem "minimal-mistakes-jekyll"
 # gem "graphql-client"
 group :jekyll_plugins do
   gem "jekyll-archives"
-
+  gem "graphql-client"
 end
 

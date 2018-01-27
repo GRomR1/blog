@@ -59,7 +59,7 @@ search                   : true # true, false (default)
 search_full_content      : true # true, false (default)
 
 # SEO Related
-google_site_verification :
+google_site_verification : "IiSJWKp1pq8YCl4Y6CzZFZ6ioPJDPfQKePK37zliFco"
 bing_site_verification   :
 yandex_site_verification : "eaea34b22b33e2ee"
 naver_site_verification  :
@@ -68,8 +68,8 @@ naver_site_verification  :
 twitter:
   username               : "GainanovRus"
 facebook:
-  username               : 
-  app_id                 :
+  username               : "gainanovrus"
+  app_id                 : "198660270874426"
   publisher              :
 og_image                 : # Open Graph/Twitter default site image
 # For specifying social profiles
@@ -78,6 +78,9 @@ social:
   type                   : # Person or Organization (defaults to Person)
   name                   : # If the user or organization name differs from the site's name
   links: # An array of links to social media profiles
+    - "https://www.facebook.com/gainanovrus"
+    - "https://twitter.com/GainanovRus"
+    - "https://linkedin.com/in/gainanovrus"
 
 # Analytics
 analytics:
@@ -99,7 +102,7 @@ author:
   codepen          :
   dribbble         :
   flickr           :
-  facebook         : "gainanovrus"
+  facebook         : "gainanovrus" # https://www.facebook.com/gainanovrus
   foursquare       :
   github           : "RuslanGainanov"
   gitlab           :
@@ -107,13 +110,13 @@ author:
   keybase          :
   instagram        :
   lastfm           :
-  linkedin         : "gainanovrus"
+  linkedin         : "gainanovrus" #
   pinterest        :
   soundcloud       :
   stackoverflow    : # "123456/username" (the last part of your profile url, e.g. https://stackoverflow.com/users/123456/username)
   steam            : # "steamId" (the last part of your profile url, e.g. https://steamcommunity.com/id/steamId/)
   tumblr           :
-  twitter          : "GainanovRus"
+  twitter          : "GainanovRus" # https://twitter.com/GainanovRus
   vine             :
   weibo            :
   xing             :
@@ -187,7 +190,7 @@ sass:
 permalink: /:categories/:title/
 paginate: 5 # amount of posts to show
 paginate_path: /page:num/
-timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: "Europe/Moscow" # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 
 # Plugins (previously gems:)
