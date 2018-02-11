@@ -3,7 +3,7 @@ title: "Monitoring system for Docker SLURM cluster"
 excerpt: "Design and deploy a system for collect, store and visualize data from SLURM cluster realized on Docker environment."
 header:
   image: assets/images/influxdb-slurm-monitoring/influxdb-slurm-monitoring-banner.png
-  teaser: assets/images/influxdb-slurm-monitoring/influxdb-slurm-monitoring-banner.png
+  teaser: assets/images/influxdb-slurm-monitoring/influxdb-slurm-monitoring-teaser.png
 sidebar:
   - title: "Role"
     image: assets/images/influxdb-slurm-monitoring/icmm_logo-min.png

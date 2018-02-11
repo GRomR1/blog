@@ -1,7 +1,14 @@
 ---
-title: "Archive Layout with Content"
-layout: archive
-permalink: /archive-layout-with-content/
+layout: single
+title: "Example post with many types of content"
+date:   2018-02-01 07:23:43 -0500
+search: false
+share: false
+comments: false
+related: false
+toc: true
+toc_label: "On page"
+categories: jekyll
 ---
 
 A variety of common markup showing how the theme styles them.
@@ -212,8 +219,3 @@ Still sticking with science and Isaac Newton's E = MC<sup>2</sup>, which should 
 ### Variable Tag
 
 This allows you to denote <var>variables</var>.
-
-{% include base_path %}
-{% for post in site.pages %}
-{% include archive-single.html %}
-{% endfor %}

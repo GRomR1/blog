@@ -277,8 +277,8 @@ defaults:
 
 # Create stylable GitHub Card using a Liquid tag {% ghcards %}
 # https://github.com/edward-shen/github-cards
-github_cards:
-    github_access_token: "7242b62f80c1b3a08c5fce15b9395cbf81a2775e"
+# github_cards:
+#    github_access_token: "7242b62f80c1b3a08c5fce15b9395cbf81a2775e"
 
 head_scripts:
   - https://buttons.github.io/buttons.js
