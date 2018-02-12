@@ -26,7 +26,7 @@ words_per_minute         : 200
 comments:
   provider               : "disqus" # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "staticman_v2" "custom"
   disqus:
-    shortname            : "blog-w2w2-top" # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
+    shortname            : "gainanov-rus" # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
   discourse:
     server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
   facebook:
@@ -96,7 +96,7 @@ author:
   bio              : "System & Software engineer"
   location         : "Russia"
   email            : 
-  uri              : "https://blog.w2w2.top"
+  uri              : "https://гайнанов.рус"
   home             : # null (default), "absolute or relative url to link to author home"
   bitbucket        :
   codepen          :
@@ -263,7 +263,7 @@ defaults:
       layout: single
       author_profile: true
       read_time: true
-      comments: # true
+      comments: true
       share: true
       related: true
   # _portfolio
