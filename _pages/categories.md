@@ -9,23 +9,17 @@ author_profile: true
 <ul>
 {% for category in group_names %}
   {% assign posts = group_items[forloop.index0] %}
-  <a href='{{ category | slugify }}'><h2 id="{{ category | slugify }}" class="archive__subtitle">{{ category }}</h2>
-  </a>
+  <h2 id="{{ category | slugify }}"><a href='{{ category | slugify }}' class="archive__subtitle">{{ category }}</a></h2>
   {% for post in posts %}
-
     <li>
-      <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+      <a href="{{ post.url | prepend: site.baseurl }}" class="archive__item-title">{{ post.title }}</a>
     </li>
-
   {% endfor %}
 {% endfor %}
 </ul>
 
 
 <h1>Tags</h1>
-<div>
-  <p style="text-align: justify;">
-{% capture site_tags %}{% for tag in site.tags %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}{% assign tags = site_tags | split:',' | sort %}
-{% include tagcloud.html %}
-  </p>
+<div class="tagcloud04">
+    {% include tagcloud.html %}
 </div>
