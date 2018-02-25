@@ -96,7 +96,7 @@ author:
   bio              : "System & Software engineer"
   location         : "Russia"
   email            : 
-  uri              : "https://гайнанов.рус"
+  uri              : "http://гайнанов.рус"
   home             : # null (default), "absolute or relative url to link to author home"
   bitbucket        :
   codepen          :
@@ -263,7 +263,7 @@ defaults:
       layout: single
       author_profile: true
       read_time: true
-      comments: #true
+      comments: true
       share: true
       related: true
   # _portfolio
