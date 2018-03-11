@@ -63,7 +63,8 @@ search_full_content      : true # true, false (default)
 #google_site_verification : "IiSJWKp1pq8YCl4Y6CzZFZ6ioPJDPfQKePK37zliFco" #old for blog.w2w2.top
 google_site_verification : "Wq8i7X_W6EpXbttUnWRWiok4EyvFVb-nyUaY_kDLDMc"
 bing_site_verification   :
-yandex_site_verification : "eaea34b22b33e2ee"
+#yandex_site_verification : "eaea34b22b33e2ee" #old for blog.w2w2.top
+yandex_site_verification : "cfbcdd4107182b42"
 naver_site_verification  :
 
 # Social Sharing
