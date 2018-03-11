@@ -5,42 +5,44 @@ excerpt: "In this article I will show you how to use the certbot Let's Encrypt c
 toc: true
 categories: linux
 tags: ssl nginx centos
+last_modified_at: 2018-03-11T16:00:00+05:00
 header:
   teaser: /assets/images/free-ssl-certbot-nginx-setup-teaser.png
   og_image: /assets/images/free-ssl-certbot-nginx-setup-teaser.png
 ---
-
 [Let's Encrypt][lets-encrypt] provides an easy way to obtain and install free TLS/SSL certificates, thereby enabling encrypted HTTPS on web servers. It simplifies the process by providing a software client, Certbot, that attempts to automate most (if not all) of the required steps. 
 
 In this article I will show you how to use the certbot Let's Encrypt client to obtain a free SSL certificate and use it with Nginx on CentOS 7. I will also show you how to automatically renew your SSL certificate.
 
 ## Prerequisites
 Before following this tutorial, you'll need a few things.
-* A CentOS 7 server.
-* A DNS A Record that points your domain to the public IP address of your server. 
+* CentOS 7 server.
+* DNS A Record that points your domain to the public IP address of your server. 
 
 Once you have all of the prerequisites out of the way, let's move on to installing the Let's Encrypt client software.
 
 ## Instructions
 
 ### Install and configure nginx
- `yum -y install nginx`
+```
+ yum -y install nginx
+ ```
  
- Add server name to nginx config file. Next a minimal configures that you net to get certificates `/etc/nginx/nginx.conf`:
+ Add server name to nginx config file. Next a minimal configures that you need to get certificates  stored in file `/etc/nginx/nginx.conf`:
 ```
 http {
-    access_log  /var/log/nginx/access.log  main;
     server {
-        listen       80 default;
+        listen       80 default_server;
         server_name  example.com;
-        root         /usr/share/nginx/html;
-        index        index.html;
+        
+        location ~ ^/(.well-known/acme-challenge/.*)$ {
+	        root     /usr/share/nginx/html;
+	    }
+	    location / {
+	       ...
+	    }
     }
 }
-```
-In the default conf you can only insert `server_name`:
-```
-server_name example.com;
 ```
 ### Install and configure Certbot
 
@@ -52,24 +54,22 @@ yum -y install certbot certbot-nginx
 ### Obtaining a Certificate
 
 Certbot provides a variety of ways to obtain SSL certificates, through various plugins. 
-This runs certbot with the --nginx plugin, using -d to specify the names we'd like the certificate to be valid for. If this is your first time running certbot, you will be prompted to enter an email address and agree to the terms of service. After doing so, certbot will communicate with the Let's Encrypt server, then run a challenge to verify that you control the domain you're requesting a certificate for.
+This runs certbot with the `--nginx` plugin, using `-d` to specify the names we'd like the certificate to be valid for. If this is your first time running certbot, you will be prompted to enter an email address and agree to the terms of service. After doing so, certbot will communicate with the Let's Encrypt server, then run a challenge to verify that you control the domain you're requesting a certificate for.
 
 I suggest you a simple command that will obtain a certifiacte without any questions and outputs:
 ```
-certbot                              \
+certbot certonly --webroot           \
 -d example.com                       \
---installer nginx                    \
---authenticator webroot              \
 --webroot-path /usr/share/nginx/html \
 --email your_email@example.com       \
---post-hook "service nginx reload"   \
+--post-hook "systemctl reload nginx" \
 --agree-tos                          \
 --quiet
 ```
 
 But you can yet view logs placed on path `/var/log/letsencrypt/letsencrypt.log`
 
-To show information about obtained certificates use next command:
+To show information about obtained certificates use command `certbot certificates`:
 ```
 # certbot certificates
 Saving debug log to /var/log/letsencrypt/letsencrypt.log
@@ -111,6 +111,13 @@ Additional information are available on the [certbot site][certs].
 
 If you didn't want use generated certificates any more just revoke it:
 ```
+certbot revoke                                              \
+--cert-path /etc/letsencrypt/live/example.com/fullchain.pem \
+--delete-after-revoke                                       \
+--quiet
+```
+I use a `--quiet` parameter if you want see a result of `certbot revoke` just run it without this option:
+```
 # certbot revoke --cert-path /etc/letsencrypt/live/example.com/fullchain.pem
 Saving debug log to /var/log/letsencrypt/letsencrypt.log
 Starting new HTTPS connection (1): acme-v01.api.letsencrypt.org
@@ -135,7 +142,7 @@ To run the renewal check daily, we will use cron, a standard system service for 
 
 We tell cron what to do by opening and editing a file called a crontab `crontab -e`:
 ```
-15 3 * * * /usr/bin/certbot renew --post-hook "service nginx reload" --quiet
+15 3 * * * /usr/bin/certbot renew --post-hook "systemctl reload nginx" --quiet
 ```
 
 The line runs the following command at 3:15 am, every day.
