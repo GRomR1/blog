@@ -311,8 +311,8 @@ http://slides.com/thomaswaldmann/borg)
 * [borgmatic Offsite](https://torsion.org/borgmatic/)
 * [Is Borg backup suitable for the production?](https://www.reddit.com/r/linux/comments/69lm87/is_borg_backup_suitable_for_the_production/)
 
-borg-install: https://borgbackup.readthedocs.io/en/stable/installation.html
-borg-vulnerability: https://borgbackup.readthedocs.io/en/stable/changes.html#pre-1-0-9-manifest-spoofing-vulnerability-cve-2016-10099
-borgmatic-offsite: https://torsion.org/borgmatic/
-borg-offsite: https://borgbackup.readthedocs.io/en/stable/index.html
-pg_dumpall: https://www.postgresql.org/docs/current/static/app-pg-dumpall.html
+[borg-install]: https://borgbackup.readthedocs.io/en/stable/installation.html
+[borg-vulnerability]: https://borgbackup.readthedocs.io/en/stable/changes.html#pre-1-0-9-manifest-spoofing-vulnerability-cve-2016-10099
+[borgmatic-offsite]: https://torsion.org/borgmatic/
+[borg-offsite]: https://borgbackup.readthedocs.io/en/stable/index.html
+[pg_dumpall]: https://www.postgresql.org/docs/current/static/app-pg-dumpall.html
