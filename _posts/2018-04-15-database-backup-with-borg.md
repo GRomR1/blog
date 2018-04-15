@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 ---
 ---
 layout: single
@@ -251,6 +251,7 @@ Apr 14 11:10:27 ubuntu systemd[1]: Started Backup PostgreSQL database.
 Don't forget setup `enable` flag on the timer for working them after reboot system.
 ```
 systemctl enable backup.timer
+systemctl start backup.timer
 ```
 
 And check active system timers with `systemctl list-timers`.
