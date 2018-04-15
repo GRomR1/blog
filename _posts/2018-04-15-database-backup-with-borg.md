@@ -1,7 +1,5 @@
 ---
 published: true
----
----
 layout: single
 title:  "Create daily database backups with Borg"
 excerpt: "This article shows how to create backups of your data from PostgreSQL DB to a remote server with a secure and effective approach"
