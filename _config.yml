@@ -69,7 +69,7 @@ naver_site_verification  :
 
 # Social Sharing
 twitter:
-  username               : "GainanovRus"
+  username               : "gainanovrus"
 facebook:
   username               : "gainanovrus"
   app_id                 : #"198660270874426"
@@ -82,7 +82,7 @@ social:
   name                   : "Ruslan Gainanov" # If the user or organization name differs from the site's name
   links: # An array of links to social media profiles
     - "https://www.facebook.com/gainanovrus"
-    - "https://twitter.com/GainanovRus"
+    - "https://twitter.com/gainanovrus"
     - "https://linkedin.com/in/gainanovrus"
 
 # Analytics
@@ -119,12 +119,14 @@ author:
   stackoverflow    : # "123456/username" (the last part of your profile url, e.g. https://stackoverflow.com/users/123456/username)
   steam            : # "steamId" (the last part of your profile url, e.g. https://steamcommunity.com/id/steamId/)
   tumblr           :
-  twitter          : "GainanovRus" # https://twitter.com/GainanovRus
+  twitter          : "gainanovrus" # https://twitter.com/GainanovRus
   vine             :
   weibo            :
   xing             :
   youtube          : # "https://youtube.com/c/MichaelRoseDesign"
   vk               : "gainanovrus"
+  telegram         : "gainanovrus"
+
 
 
 # Reading Files
