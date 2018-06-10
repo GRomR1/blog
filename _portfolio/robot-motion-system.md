@@ -3,7 +3,7 @@ title: "Computer-aided system to control a moving of a robotic system in an envi
 excerpt: "The work was been maked for my University in my masters thesis by me"
 header:
   image: assets/images/robot-motion/robot-motion-main-min.png
-  teaser: assets/images/vrobot-motion/robot-motion-main-min.png
+  teaser: assets/images/robot-motion/robot-motion-main-min.png
 sidebar:
   - title: "Role"
     image: assets/images/robot-motion/pnrpu-logo-min.png
