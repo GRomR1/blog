@@ -18,8 +18,6 @@ author_profile: true
 {% endfor %}
 </ul>
 
-
+<hr />
 <h1>Tags</h1>
-<div class="tagcloud04">
-    {% include tagcloud.html %}
-</div>
+{% include tagcloud2.html %}
