@@ -6,9 +6,12 @@ excerpt: >-
   In this post, I want to tell about of my journey to a wonderful place of a Russia. It place is a Crimea. I use my native language because only with it I can explain the beauty of this land. Maybe it will be translated later.
 toc: true
 header:
+  teaser: /assets/images/journey-to-crimea/overlay_crimea.jpg
+  og_image: /assets/images/journey-to-crimea/overlay_crimea.jpg
   overlay_image: /assets/images/journey-to-crimea/overlay_crimea.jpg
 categories: travelling
 tags: russia
+
 crimea-gallery:
   - url: /assets/images/journey-to-crimea/crimea-1.jpg
     image_path: /assets/images/journey-to-crimea/crimea-1-th.jpg
@@ -182,13 +185,14 @@ conclusion-gallery:
 12-ти метровая башня сделана из чугуна. Маяк дожил до наших дней в неизменном виде. 
 Совсем рядом находятся территории дач высших правительственных чиновников СССР, где находился М.С. Горбачев во время попытки государственного переворота 1991 г.
 
-> Отбиваясь от череды таксистов, и немного передохнув в Ялте отправился покорять самую южную точку Крыма. 
+> Отбиваясь от череды таксистов и немного передохнув в Ялте, отправился покорять самую южную точку Крыма. 
   Добраться до туда можно на проходящем автобусе до Севастополя. 
   Билетов на ближайшие рейсы не оказалось, но местные водители автобусов без проблем подбирают людей, стоит лишь немного отойти за территорию вокзала. 
+  Зачастую это бывает дешевле, чем в кассе.
   
 > Дорога до мыса проходит вдоль живописного побережья на значительной высоте над морем. Море и горы. Красота... Сам мыс посетить, к сожалению, не удалось. 
-  Территория вокруг него была вся застроена различными постройками. К маяку также не попасть. 
-  Режимный объект. Зато застал закат на фоне гор. А вообще, темнеет, на удивление, быстро и рано.
+  Территория вокруг него была вся застроена различными постройками. К маяку также не попасть - режимный объект. 
+  Зато застал живописный закат на фоне гор. А вообще, темнеет, на удивление, быстро и рано.
 
 {% include gallery id="sarych-gallery" %}
 
