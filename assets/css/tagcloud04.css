@@ -23,7 +23,6 @@
 	white-space: nowrap;
 	text-overflow: ellipsis;
 	overflow: hidden;
-	color: #333;
 	font-size: 18px;
 	text-decoration: none;
 	-webkit-transition: .2s;
@@ -40,7 +39,6 @@
 	background-color: #3498db;
 	border: 1px solid #3498db;
 	border-radius: 100%;
-	color: #fff;
 	font-size: 13px;
 	text-align: center;
 	opacity: 0;
@@ -63,7 +61,6 @@
 }
 .tagcloud04 ul li a:hover {
 	border: 1px solid #3498db;
-	color: #3498db;
 }
 .tagcloud04 ul li:hover span {
 	right: -26px;
