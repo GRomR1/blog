@@ -1,6 +1,5 @@
 ---
 published: true
-layout: single
 title: GitLab CI/CD. Install and configure Runner
 excerpt: >-
   GitLab uses Runners for a running scripts that defined in your CI pipeline.
@@ -73,7 +72,7 @@ Don't forget place your toker. It stored in Admin Area ➔ Overview ➔ Runners:
 
 `https://YOUR_GITLAB_URL/admin/runners`
 
-![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/gitlab-ci/runners-admin.png){: .align-center}
+![runners-admin]({{ site.url }}{{ site.baseurl }}/assets/images/gitlab-ci/runners-admin.png){: .align-center}
 
 And set the correct description and tags. I prefer to use a hostname as a description.
 I named it `nginx` because I run it on Nginx server. And set up tags.
@@ -107,11 +106,9 @@ Just choose our new Runner in Admin Area and determine some project or projects 
 Once the Runner has been set up, you should see it on the Runners page of your
 project, following Settings ➔ CI/CD:
 
-<figure>
-	<a href="/assets/images/gitlab-ci/change-runner-type.png">
-    <img src="/assets/images/gitlab-ci/change-runner-type.png">
-  </a>
-</figure>
+![change-runner-type]({{ site.url }}{{ site.baseurl }}/assets/images/gitlab-ci/change-runner-type.png){: .align-center}
+
+
 
 After that you can configure your CI process in a .gitlab-ci.yml file with
 using tags to select specific Runners. For example:

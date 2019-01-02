@@ -1,5 +1,4 @@
 ---
-layout: single
 title:  "Add a free SSL certificate to NGINX server"
 excerpt: "In this article I will show you how to use the certbot Let's Encrypt client to obtain a free SSL certificate and use it with Nginx on CentOS 7. I will also show you how to automatically renew your SSL certificate."
 toc: true
@@ -10,14 +9,14 @@ header:
   teaser: /assets/images/free-ssl-certbot-nginx-setup-teaser.png
   og_image: /assets/images/free-ssl-certbot-nginx-setup-teaser.png
 ---
-[Let's Encrypt][lets-encrypt] provides an easy way to obtain and install free TLS/SSL certificates, thereby enabling encrypted HTTPS on web servers. It simplifies the process by providing a software client, Certbot, that attempts to automate most (if not all) of the required steps. 
+[Let's Encrypt][lets-encrypt] provides an easy way to obtain and install free TLS/SSL certificates, thereby enabling encrypted HTTPS on web servers. It simplifies the process by providing a software client, Certbot, that attempts to automate most (if not all) of the required steps.
 
 In this article I will show you how to use the certbot Let's Encrypt client to obtain a free SSL certificate and use it with Nginx on CentOS 7. I will also show you how to automatically renew your SSL certificate.
 
 ## Prerequisites
 Before following this tutorial, you'll need a few things.
 * CentOS 7 server.
-* DNS A Record that points your domain to the public IP address of your server. 
+* DNS A Record that points your domain to the public IP address of your server.
 
 Once you have all of the prerequisites out of the way, let's move on to installing the Let's Encrypt client software.
 
@@ -27,14 +26,14 @@ Once you have all of the prerequisites out of the way, let's move on to installi
 ```
  yum -y install nginx
  ```
- 
+
  Add server name to nginx config file. Next a minimal configures that you need to get certificates  stored in file `/etc/nginx/nginx.conf`:
 ```
 http {
     server {
         listen       80 default_server;
         server_name  example.com;
-        
+
         location ~ ^/(.well-known/acme-challenge/.*)$ {
 	        root     /usr/share/nginx/html;
 	    }
@@ -53,7 +52,7 @@ yum -y install certbot certbot-nginx
 
 ### Obtaining a Certificate
 
-Certbot provides a variety of ways to obtain SSL certificates, through various plugins. 
+Certbot provides a variety of ways to obtain SSL certificates, through various plugins.
 This runs certbot with the `--nginx` plugin, using `-d` to specify the names we'd like the certificate to be valid for. If this is your first time running certbot, you will be prompted to enter an email address and agree to the terms of service. After doing so, certbot will communicate with the Let's Encrypt server, then run a challenge to verify that you control the domain you're requesting a certificate for.
 
 I suggest you a simple command that will obtain a certifiacte without any questions and outputs:
@@ -138,7 +137,7 @@ at /etc/letsencrypt/live/example.com/fullchain.pem
 
 Let's Encrypt's certificates are only valid for ninety days. This is to encourage users to automate their certificate renewal process. We'll need to set up a regularly run command to check for expiring certificates and renew them automatically.
 
-To run the renewal check daily, we will use cron, a standard system service for running periodic jobs. 
+To run the renewal check daily, we will use cron, a standard system service for running periodic jobs.
 
 We tell cron what to do by opening and editing a file called a crontab `crontab -e`:
 ```
@@ -147,7 +146,7 @@ We tell cron what to do by opening and editing a file called a crontab `crontab 
 
 The line runs the following command at 3:15 am, every day.
 
-The renew command for Certbot will check all certificates installed on the system and update any that are set to expire in less than thirty days. After a renew process has completed a nginx server will been reload. 
+The renew command for Certbot will check all certificates installed on the system and update any that are set to expire in less than thirty days. After a renew process has completed a nginx server will been reload.
 
 All installed certificates will be automatically renewed and reloaded when they have thirty days or less before they expire.
 
