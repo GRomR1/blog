@@ -44,12 +44,10 @@ Also was configured a Grafana dashboard that helps view all statistics about tas
 
 [https://github.com/GRomR1/docker-slurmbase](https://github.com/GRomR1/docker-slurmbase)
 
-<!-- {% include github_star.html user="GRomR1" repo="docker-slurmbase" %} -->
 
 ### influxdb-slurm-monitoring:
 
 [https://github.com/GRomR1/influxdb-slurm-monitoring](https://github.com/GRomR1/influxdb-slurm-monitoring)
-<!-- {% include github_star.html user="GRomR1" repo="influxdb-slurm-monitoring" %} -->
 
 ----------------------------------------------------------------------
 
